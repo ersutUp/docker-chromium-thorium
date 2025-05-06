@@ -9,6 +9,9 @@ LABEL maintainer="thelamer"
 # title
 ENV TITLE=Chromium
 
+# add local files
+COPY /root /
+
 RUN \
   echo "**** add icon ****" && \
   curl -o \
@@ -36,9 +39,6 @@ RUN \
     /var/lib/apt/lists/* \
     /var/tmp/* \
     /tmp/*
-
-# add local files
-COPY /root /
 
 # ports and volumes
 EXPOSE 3000
