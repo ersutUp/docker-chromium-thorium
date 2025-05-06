@@ -28,6 +28,7 @@ RUN \
   sudo wget --no-hsts -O thorium-browser.deb https://github.com/Alex313031/thorium/releases/download/M130.0.6723.174/thorium-browser_130.0.6723.174_SSE4.deb && \
   apt install -y ./thorium-browser.deb && \
   sudo rm -f thorium-browser.deb && \
+  sudo chmod 777 /usr/bin/start-thromium.sh && \
   echo "**** cleanup ****" && \
   apt-get autoclean && \
   rm -rf \
